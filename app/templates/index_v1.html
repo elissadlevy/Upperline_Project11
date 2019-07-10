@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Announcements</title>
+        <link rel="stylesheet" href="static/style.css" />
+    </head>
+    <body>
+      <h1>Here are all the announcements!  The most recently submitted announcement is on top!</h1>
+      <a href = "/newannouncement">Click here to add an announcement.</a>
+      <div class="event-list">
+        <ul>
+          {% for announcement in allAnnouncements %}
+            <li>{{ announcement.submitTime }} - {{ announcement.submitter }} - {{ announcement.clubOrGroup }} - {{ announcement.startDate }} - {{ announcement.endDate }} - {{ announcement.myAnnouncement }}</li>
+          {% endfor %}
+        </ul>        
+      </div>
+      
+      <script type="text/javascript" src="static/test.js"></script>
+      
+    </body>
+</html>
